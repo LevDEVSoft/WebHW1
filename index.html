@@ -11,9 +11,8 @@
         <nav>
             <a href="index.html" class="home-link">Home</a>
             <a href="addPost.html" class="addpost-link">addPost</a>
-            <a href="login.html">
-                <img src="user.png" alt="user" class="user-icon">
-            </a>
+            <!-- Lev fix: added alt text for accessibility -->
+            <img src="avatar.png" alt="User profile" class="user-icon"> <!-- Lev fix: added pfp -->
         </nav>
     </header>
 
@@ -21,41 +20,38 @@
     <main>
         <!-- Left sidebar -->
         <div class="sidebar-left">
-            <p>All posts should have text/ message</p>
+            <!-- Lev fix: clarified instruction text -->
+            <p>All posts should include a message</p>
         </div>
 
         <!-- Posts section -->
         <div class="posts">
-            <!-- Post 1 -->
-            <div class="post">
+            <!-- Lev fix: added IDs to posts (easier to target with JS/CSS later) -->
+            <div class="post" id="post-1">
                 <span class="date">Oct 22, 2022</span>
                 <p>Tartu 2022</p>
                 <button class="like-button">👍</button>
             </div>
 
-            <!-- Post 2 -->
-            <div class="post">
+            <div class="post" id="post-2">
                 <span class="date">Oct 2, 2022</span>
                 <p>Anyone knows in which room is the lab today?</p>
                 <button class="like-button">👍</button>
             </div>
 
-            <!-- Post 3 -->
-            <div class="post">
+            <div class="post" id="post-3">
                 <span class="date">Sep 25, 2022</span>
                 <p>Studying for the Web Application Development exam!</p>
                 <button class="like-button">👍</button>
             </div>
 
-            <!-- Post 4 -->
-            <div class="post">
+            <div class="post" id="post-4">
                 <span class="date">Sep 18, 2022</span>
                 <p>First homework is done! HTML is actually fun to learn.</p>
                 <button class="like-button">👍</button>
             </div>
 
-            <!-- Post 5 -->
-            <div class="post">
+            <div class="post" id="post-5">
                 <span class="date">Sep 10, 2022</span>
                 <p>Hello everyone! This is my first post on PostIt!</p>
                 <button class="like-button">👍</button>
@@ -63,12 +59,15 @@
         </div>
 
         <!-- Right sidebar (empty) -->
-        <div class="sidebar-right"></div>
+        <!-- Lev fix: added placeholder text to avoid empty div -->
+        <div class="sidebar-right">
+            <p>Upcoming features will be displayed here</p>
+        </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>Lev, Leonard, Stepan</p>
+        <p>Footer</p>
     </footer>
 </body>
 </html>

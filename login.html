@@ -24,19 +24,27 @@
             <p>Please log in</p>
             
             <!-- Login form -->
-            <form action="index.html">
+            <!-- Lev fix: added method="post" for realism -->
+            <form action="index.html" method="post">
+                <!-- Lev fix: added labels for accessibility -->
+                <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Email" required>
+
+                <label for="password">Password</label>
                 <input type="password" id="password" placeholder="Password" required>
-                <button type="submit" class="login-button">Log in</button>
+
+                <!-- Lev fix: added inline cursor style -->
+                <button type="submit" class="login-button" style="cursor:pointer;">Log in</button>
             </form>
             
-            <a href="#" class="forgot-password">Forget password</a>
+            <!-- Lev fix: changed text from Forget → Forgot -->
+            <a href="#" class="forgot-password">Forgot password?</a>
         </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>Lev, Leonard, Stepan</p>
+        <p>Footer</p>
     </footer>
 </body>
 </html>

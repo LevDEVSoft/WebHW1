@@ -17,28 +17,28 @@
     <!-- Main -->
     <main>
         <div class="add-post-box">
-            <p>Post body</p>
-            
-            <!-- Textarea for post -->
-            <textarea placeholder="textarea"></textarea>
-            
-            <!-- File selection -->
-            <div class="file-section">
-                <label>Select file</label>
-                <input type="file" id="file-input">
-                <button class="file-button">Choose File</button>
-            </div>
-            
-            <!-- Create post button -->
-            <a href="index.html">
-                <button class="create-button">Create post</button>
-            </a>
+            <!-- Lev fix: replaced <a><button></button></a> with proper <form> -->
+            <form action="index.html" method="get" class="add-post-form">
+
+                <!-- Lev fix: added label + id for textarea, required validation -->
+                <label for="post-body">Post body</label>
+                <textarea id="post-body" placeholder="Write something..." required></textarea>
+                
+                <!-- Lev fix: added label + accept only images -->
+                <label for="file-input">Select file</label>
+                <input type="file" id="file-input" accept="image/*">
+
+                <!-- Lev fix: proper submit button -->
+                <button type="submit" class="create-button">Create post</button>
+            </form>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>Lev, Leonard, Stepan</p>
-    </footer>
+    <!-- Footer --> 
+     <!-- Lev fix: changed to center -->
+<footer style="text-align: center;">
+    <p>Footer</p>
+</footer>
+
 </body>
 </html>
