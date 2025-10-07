@@ -23,6 +23,7 @@ header nav {
   padding: 10px;
   display: flex;   /* flex for menu */
   gap: 8px;
+  align-items: center; /* Lev: align links & avatar vertically */
 }
 /* child selector */
 nav > a {
@@ -36,20 +37,29 @@ nav > a:hover {
   background: #e0e0e0;
 }
 
+/* Lev: normalize avatar size and shape (no stretch) */
+.user-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block; /* Lev: removes inline gaps around img */
+}
+
 /* ===== MAIN LAYOUT ===== */
 main {
   flex: 1;                   /* takes available space */
-  max-width: 1000px;
+  max-width: 900px;          /* Lev: slightly narrower page */
   margin: 0 auto;
-  padding: 16px;
+  padding: 14px;             /* Lev: a bit tighter padding */
   display: flex;             /* 3 columns */
-  gap: 16px;
+  gap: 14px;                 /* Lev: smaller gap */
 }
 .sidebar-left,
 .sidebar-right {
-  flex: 0 0 200px;
+  flex: 0 0 180px;           /* Lev: slimmer sidebars */
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 8px;              /* Lev: tighter padding */
   border-radius: 6px;
   background: #fafafa;
 }
@@ -68,18 +78,20 @@ main {
 .post {
   border: 1px solid #ddd;
   border-radius: 6px;
-  padding: 10px;
+  padding: 8px;              /* Lev: smaller box */
   background: #fff;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 8px;                  /* Lev: tighter inner gap */
+  margin-bottom: 10px;       /* Lev: tighter list spacing */
+  transition: box-shadow .15s ease; /* Lev: subtle hover */
 }
-/* pseudo-element */
+.post:hover { box-shadow: 0 2px 6px rgba(0,0,0,.06); } /* Lev */
+ /* pseudo-element */
 .post::before {
   content: "";
   display: inline-block;
-  width: 4px;
+  width: 3px;                /* Lev: thinner accent bar */
   height: 100%;
   background: #ddd;
   margin-right: 6px;
@@ -87,13 +99,13 @@ main {
 .post .date {
   font-size: 12px;
   color: #666;
-  min-width: 95px;
+  min-width: 85px;           /* Lev: smaller date width */
 }
 .like-button {
   margin-left: auto;
   border: 1px solid #ddd;
   background: #f7f7f7;
-  padding: 4px 8px;
+  padding: 4px 6px;          /* Lev: smaller button */
   border-radius: 6px;
   cursor: pointer;
 }
@@ -101,28 +113,28 @@ main {
 /* adjacent sibling */
 .post + .post { border-top: 1px solid #eee; }
 /* general sibling */
-.post ~ .post { margin-top: 8px; }
+.post ~ .post { margin-top: 6px; } /* Lev: a bit less top margin */
 
 /* ===== ADD POST PAGE ===== */
+/* Lev: make the add-post box smaller and centered; prevent flex stretching */
 .add-post-box {
-  max-width: 700px;
-  margin: 0 auto;
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 6px;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  max-width: 420px;      /* smaller box */
+  width: 100%;
+  align-self: center;    /* vertically center within main */
+  margin: 24px auto;     /* horizontal center + some top/bottom space */
+  padding: 12px;         /* keep your padding */
+  height: auto;          /* ensure natural height */
 }
+
 textarea {
   width: 100%;
-  min-height: 140px;
+  min-height: 110px;         /* Lev: smaller default height */
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 8px;
   font: inherit;
   outline: none;
+  resize: vertical;          /* Lev: allow vertical resize */
 }
 /* focus */
 textarea:focus { border-color: #999; }
@@ -160,21 +172,21 @@ textarea:focus { border-color: #999; }
 
 /* ===== LOGIN PAGE ===== */
 .login-box {
-  max-width: 400px;
+  max-width: 340px;          /* Lev: smaller login box */
   margin: 0 auto;
   border: 1px solid #ddd;
-  padding: 16px;
+  padding: 12px;             /* Lev: tighter padding */
   border-radius: 6px;
   background: #fff;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;                  /* Lev: tighter gap */
   text-align: center;
 }
 #email,
 #password {
   width: 100%;
-  padding: 10px;
+  padding: 9px;              /* Lev: slightly slimmer inputs */
   border: 1px solid #ddd;
   border-radius: 6px;
   outline: none;
@@ -187,7 +199,7 @@ textarea:focus { border-color: #999; }
 #email:focus,
 #password:focus { border-color: #999; }
 /* adjacent sibling for spacing */
-#email + #password { margin-top: 8px; }
+#email + #password { margin-top: 6px; } /* Lev: tighter spacing */
 .login-button { width: 100%; }
 
 /* ===== FOOTER ===== */
@@ -198,9 +210,10 @@ footer {
 footer p {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 8px;              /* Lev: smaller footer padding */
   color: #666;
   text-align: center;
+  font-size: 14px;           /* Lev: slightly smaller text */
 }
 
 /* ===== RESPONSIVE ===== */
@@ -211,3 +224,18 @@ footer p {
 
 /* visible focus for links */
 a:focus { outline: 2px solid #999; outline-offset: 2px; }
+
+
+/* Lev: center Login page only (no impact on other pages) */
+.page-login main {
+  justify-content: center;   /* Lev: horizontal center */
+  align-items: center;       /* Lev: vertical center */
+  min-height: calc(100vh - 120px); /* Lev: account for header+footer approx */
+}
+
+/* Lev: make login card a bit smaller */
+.login-box {
+  max-width: 320px;  /* Lev: smaller width */
+  padding: 12px;     /* Lev: compact padding */
+  margin: 0 auto;    /* Lev: keep horizontal centering fallback */
+}
