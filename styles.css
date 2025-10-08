@@ -78,12 +78,12 @@ main {
 .post {
   border: 1px solid #ddd;
   border-radius: 6px;
-  padding: 8px;              /* smaller box */
+  padding: 8px;              /*Lev smaller box */
   background: #fff;
   display: flex;
   align-items: center;
-  gap: 8px;                  /* tighter inner gap */
-  margin-bottom: 10px;       /* tighter list spacing */
+  gap: 8px;                  /*Lev tighter inner gap */
+  margin-bottom: 10px;       /*Lev tighter list spacing */
   transition: box-shadow .15s ease; /* subtle hover */
 }
 .post:hover { box-shadow: 0 2px 6px rgba(0,0,0,.06); } /* Lev */
@@ -172,7 +172,7 @@ textarea:focus { border-color: #999; }
 
 /* ===== LOGIN PAGE ===== */
 .login-box {
-  max-width: 340px;          /* smaller login box */
+  max-width: 340px;          /* Levsmaller login box */
   margin: 0 auto;
   border: 1px solid #ddd;
   padding: 12px;             /* tighter padding */
@@ -180,13 +180,13 @@ textarea:focus { border-color: #999; }
   background: #fff;
   display: flex;
   flex-direction: column;
-  gap: 8px;                  /* tighter gap */
+  gap: 8px;                  /*Lev tighter gap */
   text-align: center;
 }
 #email,
 #password {
   width: 100%;
-  padding: 9px;              /* slightly slimmer inputs */
+  padding: 9px;              /* Lev slightly slimmer inputs */
   border: 1px solid #ddd;
   border-radius: 6px;
   outline: none;
