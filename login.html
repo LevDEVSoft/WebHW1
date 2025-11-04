@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,20 +25,16 @@
             <p>Please log in</p>
             
             <!-- Login form -->
-            <!-- Lev fix: added method="post" for realism -->
             <form action="index.html" method="post">
-                <!-- Lev fix: added labels for accessibility -->
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Email" required>
 
                 <label for="password">Password</label>
                 <input type="password" id="password" placeholder="Password" required>
 
-                <!-- Lev fix: added inline cursor style -->
-                <button type="submit" class="login-button" style="cursor:pointer;">Log in</button>
+                <button type="submit" class="login-button">Log in</button>
             </form>
             
-            <!-- Lev fix: changed text from Forget → Forgot -->
             <a href="#" class="forgot-password">Forgot password?</a>
         </div>
     </main>

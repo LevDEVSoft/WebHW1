@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Post</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,7 +13,7 @@
             <a href="index.html" class="home-link">Home</a>
             <a href="addPost.html" class="addpost-link">addPost</a>
             <!-- dropdown menu -->
-             <div class="user-menu">
+            <div class="user-menu">
                 <a href="login.html" class="avatar-link">
                     <img src="avatar.png" alt="User profile" class="user-icon">
                 </a>
@@ -20,32 +21,29 @@
                     <p class="user-name">John Doe</p>
                     <p class="user-email">john.doe@ut.ee</p>
                     <a href="login.html" class="logout-link">Logout</a>
+                </div>
             </div>
+        </nav>
     </header>
 
     <!-- Main -->
     <main>
         <div class="add-post-box">
-            <!-- Lev fix: replaced <a><button></button></a> with proper <form> -->
             <form action="index.html" method="get" class="add-post-form">
-
-                <!-- Lev fix: added label + id for textarea, required validation -->
                 <label for="post-body">Post body</label>
                 <textarea id="post-body" placeholder="Write something..." required></textarea>
                 
-                <!-- Lev fix: added label + accept only images -->
-                <label for="file-input">Select file</label>
-                <input type="file" id="file-input" accept="image/*">
-
-                <!-- Lev fix: proper submit button -->
-                <button type="submit" class="create-button">Create post</button>
+                <div class="file-section">
+                    <input type="file" id="file-input" accept="image/*">
+                    <label for="file-input" class="file-button">Select file</label>
+                    <button type="submit" class="create-button">Create post</button>
+                </div>
             </form>
         </div>
     </main>
 
-        <!-- Footer --> 
-        <!-- Lev fix: changed to center -->
-    <footer style="text-align: center;">
+    <!-- Footer -->
+    <footer>
         <p>Footer</p>
     </footer>
     <script src="script.js"></script>

@@ -1,56 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- Lev HW2 -->
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Lev HW2 -->
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <a href="index.html" class="home-link">Home</a>
             <a href="addPost.html" class="addpost-link">addPost</a>
-            <!-- dropdown menu -->
-             <div class="user-menu">
-                <a href="login.html" class="avatar-link">
+
+            <div class="user-menu">
+                
+                <button id="avatarBtn" class="avatar-link" aria-expanded="false" aria-controls="user-dropdown" type="button"> <!-- Lev HW2 -->
                     <img src="avatar.png" alt="User profile" class="user-icon">
-                </a>
-                <div id="user-dropdown" class="dropdown-content">
-                    <p class="user-name">John Doe</p>
-                    <p class="user-email">john.doe@ut.ee</p>
-                    <a href="login.html" class="logout-link">Logout</a>
+                </button> <!-- Lev HW2 -->
+                <div id="user-dropdown" class="dropdown-content" hidden> <!-- Lev HW2 -->
+                    <p class="user-name" id="userName">John Doe</p> <!-- Lev HW2 -->
+                    <p class="user-email" id="userEmail">john.doe@ut.ee</p> <!-- Lev HW2 -->
+                    <a href="login.html" class="logout-link" id="logoutBtn">Logout</a> <!-- Lev HW2 -->
+                </div>
             </div>
-        </div>
         </nav>
     </header>
 
-    <!-- Main -->
-    <main>
-        <!-- Left sidebar -->
+    
+    <main class="layout"> <!-- Lev HW2 -->
         <div class="sidebar-left">
-            <!-- Lev fix: clarified instruction text -->
             <p>All posts should include a message</p>
         </div>
 
-        <!-- Posts section -->
         <div class="posts">
-            
+            <div id="feed"></div> <!-- Lev HW2 -->
+            <p id="emptyState" hidden>No posts yet.</p> <!-- Lev HW2 -->
         </div>
 
-        <!-- Right sidebar (empty) -->
-        <!-- Lev fix: added placeholder text to avoid empty div -->
         <div class="sidebar-right">
             <p>Upcoming features will be displayed here</p>
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>Footer</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="login-dropdown.js" defer></script> <!-- Lev HW2 -->
+    <script src="script.js" defer></script> <!-- Lev HW2 -->
 </body>
 </html>
-
-
