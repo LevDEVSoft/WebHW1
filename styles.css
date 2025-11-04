@@ -239,3 +239,52 @@ a:focus { outline: 2px solid #999; outline-offset: 2px; }
   padding: 12px;     /* Lev: compact padding */
   margin: 0 auto;    /* Lev: keep horizontal centering fallback */
 }
+
+
+/* DROPDOWN MENU */
+.user-menu {
+  position: relative;           /* Creates positioning context for dropdown */
+  margin-left: auto;            /* Pushes menu to the right edge */
+}
+
+/* Dropdown content - hidden by default */
+#user-dropdown {
+  display: none;                /* Hidden until user clicks avatar */
+  position: absolute;           /* Positioned relative to .user-menu */
+  right: 0;                     /* Aligned to right edge */
+  top: 45px;                    /* Offset below the avatar */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);  /* Subtle shadow for depth */
+  min-width: 180px;             /* Minimum width for content */
+  padding: 10px;
+  z-index: 1000;                /* Ensures dropdown appears above other content */
+}
+
+/* Style for all paragraph elements inside dropdown */
+#user-dropdown p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* User name styling */
+.user-name {
+  font-weight: bold;
+}
+
+/* User email styling with bottom border separator */
+.user-email {
+  color: #666;
+  font-size: 13px;
+}
+
+/* Logout link styling with top border separator */
+.logout-link {
+  display: block;
+  color: #d9534f;              
+  text-decoration: none;
+  padding-top: 8px;
+  border-top: 1px solid #eee;   /* Visual separator above logout */
+  margin-top: 8px;
+}

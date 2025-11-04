@@ -11,7 +11,16 @@
         <nav>
             <a href="index.html" class="home-link">Home</a>
             <a href="addPost.html" class="addpost-link">addPost</a>
-        </nav>
+            <!-- dropdown menu -->
+             <div class="user-menu">
+                <a href="login.html" class="avatar-link">
+                    <img src="avatar.png" alt="User profile" class="user-icon">
+                </a>
+                <div id="user-dropdown" class="dropdown-content">
+                    <p class="user-name">John Doe</p>
+                    <p class="user-email">john.doe@ut.ee</p>
+                    <a href="login.html" class="logout-link">Logout</a>
+            </div>
     </header>
 
     <!-- Main -->
@@ -34,11 +43,11 @@
         </div>
     </main>
 
-    <!-- Footer --> 
-     <!-- Lev fix: changed to center -->
-<footer style="text-align: center;">
-    <p>Footer</p>
-</footer>
-
+        <!-- Footer --> 
+        <!-- Lev fix: changed to center -->
+    <footer style="text-align: center;">
+        <p>Footer</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
