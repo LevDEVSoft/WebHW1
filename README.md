@@ -1,4 +1,4 @@
-# PostIt — WebHW1
+# PostIt — WebHW
 
 **Team:** Group P  
 **Members:** Lev Listov, Leonard Lume, Stepan Timonin
