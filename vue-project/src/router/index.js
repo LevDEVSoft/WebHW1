@@ -1,15 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import MainPage from '../views/MainPage.vue'
-import SignupPage from '../views/SignupPage.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import MainPage from '../views/MainPage.vue';
+import SignupPage from '../views/SignupPage.vue';
 
 const routes = [
-  { path: '/', component: MainPage },
-  { path: '/signup', component: SignupPage }
-]
+  { path: '/', name: 'home', component: MainPage },
+  { path: '/signup', name: 'signup', component: SignupPage },
+];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes
-})
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+});
 
-export default router
+export default router;

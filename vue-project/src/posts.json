@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "author": "Leonard Lume",
+    "date": "2025-10-22",
+    "text": "Tartu 2025 — project grind mode on.",
+    "image": "https://picsum.photos/seed/p1/640/360"
+  },
+  {
+    "id": 2,
+    "author": "Stepan",
+    "date": "2025-10-20",
+    "text": "Anyone knows in which room is the lab today?",
+    "image": ""
+  },
+  {
+    "id": 3,
+    "author": "Leonard",
+    "date": "2025-10-18",
+    "text": "Studying for the Web Application Development exam!",
+    "image": "https://picsum.photos/seed/p3/640/360"
+  },
+  {
+    "id": 4,
+    "author": "Stepan",
+    "date": "2025-10-15",
+    "text": "First homework is done! HTML is actually fun to learn.",
+    "image": ""
+  },
+  {
+    "id": 5,
+    "author": "Leonard Lume",
+    "date": "2025-10-10",
+    "text": "Hello everyone! This is my first post on PostIt!",
+    "image": "https://picsum.photos/seed/p5/640/360"
+  },
+  {
+    "id": 6,
+    "author": "Leonard Lume",
+    "date": "2025-09-30",
+    "text": "Dark mode soon™.",
+    "image": ""
+  },
+  {
+    "id": 7,
+    "author": "Lev",
+    "date": "2025-09-25",
+    "text": "Fixing CSS cascade like a boss.",
+    "image": "https://picsum.photos/seed/p7/640/360"
+  },
+  {
+    "id": 8,
+    "author": "Lev",
+    "date": "2025-09-19",
+    "text": "New feature: likes. Coming next sprint.",
+    "image": ""
+  },
+  {
+    "id": 9,
+    "author": "Stepan",
+    "date": "2025-09-12",
+    "text": "Git hooks are underrated.",
+    "image": "https://picsum.photos/seed/p9/640/360"
+  },
+  {
+    "id": 10,
+    "author": "Lev",
+    "date": "2025-09-01",
+    "text": "Semester kickoff!",
+    "image": ""
+  }
+]
