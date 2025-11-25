@@ -39,3 +39,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.post-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 8px;
+  object-fit: cover;
+}
+</style>
