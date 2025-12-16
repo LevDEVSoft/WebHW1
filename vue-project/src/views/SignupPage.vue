@@ -131,6 +131,29 @@ export default {
       this.tried = false;
     }
   },
+
+  async handleSubmit() {
+    this.tried = true;
+    if (this.errors.length > 0) return;
+    
+    try {
+      const res = await fetch('http://localhost:3000/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: this.email, password: this.password }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        localStorage.setItem('token', data.token);
+        this.$router.push('/');
+      } else {
+        alert(data.error);
+      }
+    } catch {
+      alert('Signup failed');
+    }
+  },
+  
 },
 };
 </script>
